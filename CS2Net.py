@@ -72,7 +72,7 @@ class FlipGradientBuilder(object):
 
 class CS2NET:
     def __init__(self):
-        flip_gradient = FlipGradientBuilder(）
+        self.flip_gradient = FlipGradientBuilder(）
             
 
     def build(self, scope):
@@ -132,5 +132,15 @@ class CS2NET:
             diff_loss1 = diff_loss(dragonhidden3,treatment_hdiden3, 'dt')
             diff_loss2 = diff_loss(dragonhidden3,factual_hidden3,'df')
             diff_loss3 = diff_loss(treatment_hdiden3,factual_hidden3, 'tf')
+
+
+            adv_fea = self.flip_gradient(hidden3)
+
+            adv_fea = layers.fully_connected(adv_fea, 32, activation_fn=activation_fn,
+                                             scope='adv_predictions1',
+                                             variables_collections=[dnn_parent_scope])
+            adv_predicttion = layers.fully_connected(adv_fea, 1, activation_fn=None,
+                                                   scope='adv_predictions2',
+                                                   variables_collections=[dnn_parent_scope])
             
         
