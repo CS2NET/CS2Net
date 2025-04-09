@@ -26,7 +26,7 @@ The CS<sup>2</sup>NET dataset is a large-scale dataset collected in one month in
 # Codes & Datasets
 
 To train CS<sup>2</sup>Net:
- '''python train.py'''
+ ```python train.py```
 
 
 
