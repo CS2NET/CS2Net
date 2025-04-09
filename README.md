@@ -16,3 +16,4 @@ Extensive offline experiments and a two-week online A/B test on Fliggy demonstra
 And in order to prevent data crossing problems, the dataset is split into training, validation, and testing sets in chronological order.
 
 
+![image](https://github.com/user-attachments/assets/22ba226c-8a43-46fb-b1bc-7e3451a22d37)
