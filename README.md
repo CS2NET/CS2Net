@@ -1,6 +1,6 @@
 Code and dataset for the paper "CS^{2}NET: A Causality-Driven Scarcity and Service-Aware Network for Hotel Inventory Management"
 
-# CS^{2}Net
+# CS<sup>2</sup>Net
 
 The CS^{2}NET dataset is a large-scale dataset collected in one month in the hotel inventory adjustment scenario of Fliggy.
 
