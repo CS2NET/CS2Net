@@ -70,9 +70,41 @@ class FlipGradientBuilder(object):
         return y
 
 
+
+class ISR:
+    def __init__(self):
+        pass
+
+
+class ESR:
+    def __init__(self):
+        pass
+
+class RSR:
+    def __init__(self):
+        self.isr =  ISR()  
+        self.esr =  ESR()
+
+class MTP:
+    def __init__(self):
+        pass
+
+
+class HSR:
+    def __init__(self):
+        pass
+                                        
+
 class CS2NET:
     def __init__(self):
         self.flip_gradient = FlipGradientBuilder(）
+        self.rsr = RSR()
+        self.hsr = HSR()
+        self.diff_loss = None
+        self.adv_loss = None
+        self.ipm_loss = None
+        self.t_loss = None
+        self.f_loss = None
             
 
     def build(self, scope):
