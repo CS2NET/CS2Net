@@ -20,6 +20,18 @@ and external inventory comparisons. The Internal Demand-Based Scarcity (IRS) sub
 - to avoid sales shifts and ensure that inventory additions lead to platform-wide sales uplift, we employ a causal inference framework to estimate the Individual Treatment Effect (ITE) of adding inventory. This framework is powered by: Multi-Constraint Disentangled Representation (MDR) module, which mitigates selection bias through adversarial and disentangled learning. Multi-Task Prediction (MTP) module, which jointly models the likelihood of successful reservations and hotel acceptance to compute ITE accurately.
 
 
+# Environment Settings
+
+Install the Python dependencies:
+ 
+ ```pip install -r requirements.txt```
+
+Install the CUDA version of DGL:
+
+- Download the DGL-Cuda package from [here](https://data.dgl.ai/wheels/cu118/repo.html).
+- Install the DGL-Cuda package (e.g., dgl-1.1.2+cu118-cp311-cp311-win_amd64.whl) using pip install dgl-1.1.2+cu118-cp311-cp311-win_amd64.whl.
+
+
 # Codes & Datasets
 
 To train CS<sup>2</sup>Net:
@@ -29,8 +41,6 @@ To train CS<sup>2</sup>Net:
 ## Datasets
 
 The CS<sup>2</sup>NET dataset is a large-scale dataset collected in one month in the hotel inventory adjustment scenario of Fliggy, and in order to prevent data crossing problems, the dataset is split into training, validation, and testing sets in chronological order.
-
-To train CS<sup>2</sup>Net:
 
  ```train.csv validation.csv test.csv ```
 
