@@ -19,9 +19,6 @@ and external inventory comparisons. The Internal Demand-Based Scarcity (IRS) sub
 - we design a Hotel Service Representation (HSR) module to obtain hotel-specific service representations, by constructing a hotel-room type service graph that carries key service-related attributes (e.g., historical rejection rates), and enhancing representation learning using graph contrastive learning (GCL).
 - to avoid sales shifts and ensure that inventory additions lead to platform-wide sales uplift, we employ a causal inference framework to estimate the Individual Treatment Effect (ITE) of adding inventory. This framework is powered by: Multi-Constraint Disentangled Representation (MDR) module, which mitigates selection bias through adversarial and disentangled learning. Multi-Task Prediction (MTP) module, which jointly models the likelihood of successful reservations and hotel acceptance to compute ITE accurately.
 
-Extensive offline experiments and a two-week online A/B test on Fliggy demonstrate CS<sup>2</sup>Net’s superiority over state-of-the-art baselines. CS2Net is now deployed in Fliggy’s Smart Inventory Management system, supporting real-time hotel inventory management.
-
-The CS<sup>2</sup>NET dataset is a large-scale dataset collected in one month in the hotel inventory adjustment scenario of Fliggy, and in order to prevent data crossing problems, the dataset is split into training, validation, and testing sets in chronological order.
 
 # Codes & Datasets
 
@@ -29,5 +26,12 @@ To train CS<sup>2</sup>Net:
 
  ```python train.py```
 
+## Datasets
+
+The CS<sup>2</sup>NET dataset is a large-scale dataset collected in one month in the hotel inventory adjustment scenario of Fliggy, and in order to prevent data crossing problems, the dataset is split into training, validation, and testing sets in chronological order.
+
+To train CS<sup>2</sup>Net:
+
+ ```train.csv validation.csv test.csv ```
 
 
