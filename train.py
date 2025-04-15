@@ -58,3 +58,22 @@ def main(_):
     if FLAGS.mode == 'train':
         distribute_train(FLAGS)
 
+
+
+def distribute_train(FLAGS_):
+    global FLAGS
+    FLAGS = FLAGS_
+
+    tf.logging.info("job name = %s" % FLAGS.job_name)
+    tf.logging.info("task index = %d" % FLAGS.task_index)
+    is_chief = FLAGS.task_index == 0
+    ps_spec = FLAGS.ps_hosts.split(",")
+    worker_spec = FLAGS.worker_hosts.split(",")
+    cluster = tf.train.ClusterSpec({"ps": ps_spec, "worker": worker_spec})
+    worker_count = len(worker_spec)
+    server = tf.train.Server(cluster, job_name=FLAGS.job_name, task_index=FLAGS.task_index)
+    if FLAGS.job_name == "ps":
+        server.join()
+    train(worker_count=worker_count, task_index=FLAGS.task_index, cluster=cluster, is_chief=is_chief,
+          target=server.target)
+
