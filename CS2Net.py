@@ -69,25 +69,17 @@ class FlipGradientBuilder(object):
         self.num_calls += 1
         return y
 
-
-
 class ISR:
     def __init__(self):
         #  Due to company policy restrictions, this component will be released upon paper acceptance.
-
-        pass
-
 
 class ESR:
     def __init__(self):
         #  Due to company policy restrictions, this component will be released upon paper acceptance.
 
-        pass
-
 class RSR:
     def __init__(self):
         #  Due to company policy restrictions, this component will be released upon paper acceptance.
-
         self.isr =  ISR()  
         self.esr =  ESR()
 
@@ -95,15 +87,9 @@ class MTP:
     def __init__(self):
         #  Due to company policy restrictions, this component will be released upon paper acceptance.
 
-        pass
-
-
 class HSR:
     def __init__(self):
-        #  Due to company policy restrictions, this component will be released upon paper acceptance.
-
-        pass
-                                        
+        #  Due to company policy restrictions, this component will be released upon paper acceptance.                                        
 
 class CS2NET:
     def __init__(self):
