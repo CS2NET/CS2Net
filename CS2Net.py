@@ -73,25 +73,30 @@ class FlipGradientBuilder(object):
 
 class ISR:
     def __init__(self):
+        # will release after accept
         pass
 
 
 class ESR:
     def __init__(self):
+        # will release after accept
         pass
 
 class RSR:
     def __init__(self):
+        # will release after accept
         self.isr =  ISR()  
         self.esr =  ESR()
 
 class MTP:
     def __init__(self):
+        # will release after accept
         pass
 
 
 class HSR:
     def __init__(self):
+        # will release after accept
         pass
                                         
 
