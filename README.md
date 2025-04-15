@@ -2,7 +2,6 @@
 
 Code and dataset for the paper "CS<sup>2</sup>NET: A Causality-Driven Scarcity and Service-Aware Network for Hotel Inventory Management"
 
-#  Due to company policy restrictions, this component will be released upon paper acceptance.
 
 # Overview:
 
